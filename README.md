@@ -91,23 +91,23 @@ json
   "status": "IN_PROGRESS"
 }
 
-🗂️ Project Structure
+🏗️ Architecture
 text
 
 task-manager/
-├── src/main/java/com/taskmanager/task_manager/
-│   ├── config/           # Configuration classes
-│   ├── controller/       # Web and REST controllers
-│   │   └── dto/         # Data Transfer Objects
-│   ├── exception/       # Custom exceptions
-│   ├── model/           # Entity classes
-│   ├── repository/      # Data access layer
-│   └── service/         # Business logic layer
-│       └── impl/        # Service implementations
-├── src/main/resources/
-│   ├── templates/       # Thymeleaf templates
-│   └── application.properties
-└── pom.xml
+├── 📁 src/main/java/com/taskmanager/task_manager/
+│   ├── ⚙️ config/           # Configuration classes
+│   ├── 🎮 controller/       # Web & REST controllers
+│   │   └── 📋 dto/         # Data Transfer Objects
+│   ├── 🚨 exception/       # Custom exceptions
+│   ├── 🏗️ model/           # Entity classes
+│   ├── 💾 repository/      # Data access layer
+│   └── ⚡ service/         # Business logic layer
+│       └── 🔧 impl/        # Service implementations
+├── 📁 src/main/resources/
+│   ├── 🎨 templates/       # Thymeleaf templates
+│   └── ⚙️ application.properties
+└── 📄 pom.xml
 
 🎨 Web Interface Features
 
@@ -207,12 +207,5 @@ Diego López Hernández
 
     GitHub: @DiegoLopezHernandez
 
-🙏 Acknowledgments
-
-    Spring Boot team for the excellent framework
-
-    Bootstrap team for the responsive CSS framework
-
-    Thymeleaf team for the template engine
 
 ⭐ If you find this project helpful, please give it a star!
