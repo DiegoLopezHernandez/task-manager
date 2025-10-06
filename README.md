@@ -1,86 +1,87 @@
-ask Manager Application
+📝 Task Manager Application
 
-A complete and professional Task Management web application built with Spring Boot, featuring both REST API and web interface.
-🚀 Features
+A complete and professional Task Management web application built with Spring Boot, featuring both REST API and modern web interface.
 
-    📝 Task Management: Create, read, update, and delete tasks
+🚀 Quick Start • 📖 Features • 🔧 API • 🏗️ Architecture
 
-    🎯 Priority System: High, Medium, and Low priority levels
+✨ Features
+Feature	Description
+🎯 Task Management	Full CRUD operations with intuitive interface
+📊 Smart Organization	Priority levels & status tracking
+🔍 Advanced Search	Find tasks by keyword in titles/descriptions
+⏰ Due Date Tracking	Never miss a deadline with date management
+📱 Dual Interface	Web UI + REST API for maximum flexibility
+🎨 Modern Design	Responsive Bootstrap 5 interface
+🛠️ Tech Stack
 
-    📊 Status Tracking: Pending, In Progress, Completed, and Cancelled statuses
+Backend:
 
-    🔍 Search Functionality: Find tasks by keyword in titles or descriptions
+    🍃 Spring Boot 3.x
 
-    ⏰ Due Date Management: Set and track task deadlines
+    🗄️ Spring Data JPA
 
-    📱 Dual Interface: Web UI and REST API
+    🌐 Spring Web MVC
 
-    💾 Database: H2 in-memory database with console access
+    ✅ Bean Validation
 
-🛠️ Technology Stack
+Frontend:
 
-    Backend: Spring Boot 3.x, Spring Data JPA, Spring Web
+    🎨 Bootstrap 5.3
 
-    Frontend: Thymeleaf, Bootstrap 5.3
+    📄 Thymeleaf Templates
 
-    Database: H2 Database (in-memory)
+    📱 Responsive Design
 
-    Build Tool: Maven
+Database & Tools:
 
-    Java Version: 17+
+    💾 H2 Database (in-memory)
 
-    Validation: Bean Validation API
+    🔄 ModelMapper
 
-    Object Mapping: ModelMapper
+    🛠️ Maven
 
-📋 Prerequisites
+🚀 Quick Start
+Prerequisites
 
     Java 17 or higher
 
     Maven 3.6 or higher
 
-    Git
-
-🏃‍♂️ Quick Start
-1. Clone the Repository
+Installation & Run
 bash
 
+# 1. Clone the repository
 git clone https://github.com/DiegoLopezHernandez/task-manager.git
+
+# 2. Navigate to project directory
 cd task-manager
 
-2. Run the Application
-bash
-
+# 3. Run the application
 mvn spring-boot:run
 
-3. Access the Application
-
-    Web Interface: http://localhost:8080
-
-    REST API: http://localhost:8080/api/tasks
-
-    H2 Database Console: http://localhost:8080/h2-console
-
-        JDBC URL: jdbc:h2:mem:taskdb
-
-        Username: sa
-
-        Password: (leave empty)
-
-📚 API Documentation
-Task Endpoints
+Access Points
+Service	URL	Credentials
+🌐 Web Application	http://localhost:8080	-
+🔗 REST API	http://localhost:8080/api/tasks	-
+🗄️ H2 Console	http://localhost:8080/h2-console	URL: jdbc:h2:mem:taskdb
+User: sa
+Pass: (empty)
+📖 API Documentation
+🔑 Core Endpoints
+Method	Endpoint	Description	Example
+GET	/api/tasks	Get all tasks	GET /api/tasks
+GET	/api/tasks/{id}	Get task by ID	GET /api/tasks/1
+POST	/api/tasks	Create new task	See example
+PUT	/api/tasks/{id}	Update task	PUT /api/tasks/1
+DELETE	/api/tasks/{id}	Delete task	DELETE /api/tasks/1
+🎯 Filtering & Search
 Method	Endpoint	Description
-GET	/api/tasks	Get all tasks
-GET	/api/tasks/{id}	Get task by ID
-POST	/api/tasks	Create new task
-PUT	/api/tasks/{id}	Update task
-DELETE	/api/tasks/{id}	Delete task
-GET	/api/tasks/status/{status}	Get tasks by status
-GET	/api/tasks/priority/{priority}	Get tasks by priority
-GET	/api/tasks/search?keyword={keyword}	Search tasks
-PATCH	/api/tasks/{id}/complete	Mark task as completed
+GET	/api/tasks/status/{status}	Filter by status
+GET	/api/tasks/priority/{priority}	Filter by priority
+GET	/api/tasks/search?keyword=term	Search tasks
+PATCH	/api/tasks/{id}/complete	Mark as completed
 GET	/api/tasks/overdue	Get overdue tasks
-Task Request Body Example
+📝 Request Example
 json
 
 {
@@ -91,108 +92,87 @@ json
   "status": "IN_PROGRESS"
 }
 
-🗂️ Project Structure
+🏗️ Architecture
 text
 
 task-manager/
-├── src/main/java/com/taskmanager/task_manager/
-│   ├── config/           # Configuration classes
-│   ├── controller/       # Web and REST controllers
-│   │   └── dto/         # Data Transfer Objects
-│   ├── exception/       # Custom exceptions
-│   ├── model/           # Entity classes
-│   ├── repository/      # Data access layer
-│   └── service/         # Business logic layer
-│       └── impl/        # Service implementations
-├── src/main/resources/
-│   ├── templates/       # Thymeleaf templates
-│   └── application.properties
-└── pom.xml
+├── 📁 src/main/java/com/taskmanager/task_manager/
+│   ├── ⚙️ config/           # Configuration classes
+│   ├── 🎮 controller/       # Web & REST controllers
+│   │   └── 📋 dto/         # Data Transfer Objects
+│   ├── 🚨 exception/       # Custom exceptions
+│   ├── 🏗️ model/           # Entity classes
+│   ├── 💾 repository/      # Data access layer
+│   └── ⚡ service/         # Business logic layer
+│       └── 🔧 impl/        # Service implementations
+├── 📁 src/main/resources/
+│   ├── 🎨 templates/       # Thymeleaf templates
+│   └── ⚙️ application.properties
+└── 📄 pom.xml
 
-🎨 Web Interface Features
+🎨 Web Interface
+✨ Key Features
 
-    Responsive Design: Works on desktop and mobile devices
+    📱 Fully Responsive - Works perfectly on all devices
 
-    Real-time Updates: Automatic page refreshes after actions
+    🎯 Visual Priority System - Color-coded priorities (Red/High, Yellow/Medium, Green/Low)
 
-    Intuitive Forms: Easy task creation and management
+    📊 Real-time Statistics - Dashboard with task counts and status overview
 
-    Visual Indicators: Color-coded priorities and statuses
+    ⚡ Instant Updates - Automatic page refreshes after actions
 
-    Statistics Dashboard: Overview of task counts and statuses
+    🎪 Intuitive Design - Clean, modern interface with smooth interactions
 
-🔧 Configuration
-Application Properties
+🖼️ Interface Preview
 
-Key configuration options in application.properties:
+The web interface provides a clean, modern experience for managing your tasks efficiently.
+🔧 Development
+Building the Project
+bash
+
+# Compile and package
+mvn clean package
+
+# Run tests
+mvn test
+
+# Run with custom profile
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
+
+Configuration
+
+Key settings in application.properties:
 properties
 
 # Server Configuration
 server.port=8080
 
-# H2 Database
+# Database
 spring.datasource.url=jdbc:h2:mem:taskdb
 spring.h2.console.enabled=true
 
-# JPA Settings
+# JPA
 spring.jpa.hibernate.ddl-auto=create-drop
 spring.jpa.show-sql=true
 
-# Thymeleaf Template Engine
-spring.thymeleaf.prefix=classpath:/templates/
+# Templates
 spring.thymeleaf.cache=false
 
-🧪 Testing the Application
-Using the Web Interface
-
-    Navigate to http://localhost:8080
-
-    Use the form to create new tasks
-
-    Manage tasks using the complete and delete buttons
-
-Using the REST API
-bash
-
-# Create a task
-curl -X POST http://localhost:8080/api/tasks \
-  -H "Content-Type: application/json" \
-  -d '{
-    "title": "Test Task",
-    "description": "This is a test task",
-    "dueDate": "2024-12-31T23:59:59",
-    "priority": 2
-  }'
-
-# Get all tasks
-curl http://localhost:8080/api/tasks
-
-# Search tasks
-curl "http://localhost:8080/api/tasks/search?keyword=test"
-
 🐛 Troubleshooting
-Common Issues
-
-    Port already in use: Change server.port in application.properties
-
-    Database connection issues: Verify H2 console URL and credentials
-
-    Build failures: Ensure Java 17+ and Maven are properly installed
-
-Logs
-
-Check application logs for detailed error information. Log level can be adjusted in application.properties:
-properties
-
-logging.level.com.taskmanager=DEBUG
-
+Issue	Solution
+Port 8080 in use	Change server.port in application.properties
+Java version error	Ensure Java 17+ is installed and configured
+Database connection	Verify H2 console URL and empty password
+Build failures	Check Maven and Java installation
 🤝 Contributing
+
+We love contributions! Here's how you can help:
 
     Fork the repository
 
     Create a feature branch (git checkout -b feature/amazing-feature)
 
-    Commit your changes (git commit -m 'Add some amazing feature')
+    Commit your changes (git commit -m 'Add amazing feature')
 
     Push to the branch (git push origin feature/amazing-feature)
 
@@ -205,4 +185,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Diego López Hernández
 
-    GitHub: @DiegoLopezHernandez
